@@ -1,34 +1,34 @@
-import java.util.List;
-import java.util.ArrayList;
-import java.util.Arrays;
+import java.util.*;
 
 public class Solution {
-    public List<List<Integer>> threeSum(int[] nums) {
-        List<List<Integer>> answer = new ArrayList<>();
+    public static List<List<Integer>> threeSum(int[] nums) {
+        Set<List<Integer>> answer = new HashSet<>();
         Arrays.sort(nums);
 
         int i = 0;
-        int j = (nums.length - 1) / 2;
-        int k = (nums.length - 1);
+        int j = 1;
+        int k = nums.length - 1;
 
         int sum;
-        while ((k - j != 1) || (j - i != 1)) {
-            sum = nums[i] + nums[j] + nums[k];
-            if (sum == 0) {
-                List<Integer> numbers = new ArrayList<>();
-                numbers.add(nums[i]);
-                numbers.add(nums[j]);
-                numbers.add(nums[k]);
-                answer.add(numbers);
+        while (i < nums.length - 2) {
+            while (j < k) {
+                sum = nums[i] + nums[j] + nums[k];
+                if (sum == 0) {
+                    List<Integer> numbers = new ArrayList<>();
+                    numbers.add(nums[i]);
+                    numbers.add(nums[j]);
+                    numbers.add(nums[k]);
+                    answer.add(numbers);
+                    j++;
+                }
+                else if (sum > 0) k--;
+                else j++;
             }
-            else if (sum > 0) {
-
-            }
-            else {
-
-            }
+            i++;
+            j = i + 1;
+            k = nums.length - 1;
         }
 
-        return answer;
+        return new ArrayList<>(answer);
     }
 }
