@@ -10,8 +10,10 @@ public class Solution {
             return new ArrayList<>();
         }
 
-        long sum = nums[i] + nums[j] + nums[k] + nums[l];
-        if (sum > 2147483646 || nums.length < 4) {
+        long number1 = nums[i], number2 = nums[j], number3 = nums[k], number4 = nums[l];
+        long sum = number1 + number2 + number3 + number4;
+
+        if (sum > 2147483646) {
             return new ArrayList<>();
         }
 
