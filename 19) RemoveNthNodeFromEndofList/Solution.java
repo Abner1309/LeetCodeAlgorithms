@@ -1,26 +1,45 @@
 public class Solution {
-//    private int listLength(ListNode head) {
-//        int len = 1;
-//        ListNode aux = new ListNode(head.val, head.next);
-//
-//        while (aux.next != null) {
-//            aux = aux.next;
-//            len++;
-//        }
-//
-//        return len;
-//    }
+    private int listLength(ListNode head) {
+        int len = 0;
+        ListNode aux = head;
 
-//    public ListNode removeNthFromEnd(ListNode head, int n) {
-//        int varListLength = listLength(head);
-//    }
+        while (aux != null) {
+            len++;
+            aux = aux.next;
+        }
+
+        return len;
+    }
+
+    public ListNode removeNthFromEnd(ListNode head, int n) {
+        int varListLength = listLength(head);
+        int jumps = varListLength - n;
+
+        if (varListLength == 1) {return head = null;}
+
+        if (jumps == 0) {
+            ListNode aux1 = head;
+            ListNode aux2 = head.next;
+
+            aux1.next = null;
+            head = aux2;
+
+            return head;
+        }
+
+        ListNode aux1 = head;
+        ListNode aux2 = head.next;
+        for (int i = 1; i < jumps; i++) {
+            aux1 = aux1.next;
+            aux2 = aux2.next;
+        }
+        aux1.next = aux1.next.next;
+        aux2.next = null;
+
+        return head;
+    }
 
     public static void main(String[] args) {
-        ListNode example = new ListNode(1);
-        example.addElement(2);
-        example.addElement(3);
-        example.addElement(4);
-        example.addElement(5);
-        System.out.println(example);
+        // Pass
     }
 }
