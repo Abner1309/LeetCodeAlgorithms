@@ -24,3 +24,44 @@ ___
 ### (5) Longest Palindromic Substring - Medium
 Given a string s, return the longest palindromic substring in s.
 ___
+### (6) Zigzag Conversion - Medium
+The string "PAYPALISHIRING" is written in a zigzag pattern on a given number of rows like this: (you may want to display this pattern in a fixed font for better legibility)
+
+P   A   H   N
+A P L S I I G
+Y   I   R
+
+And then read line by line: "PAHNAPLSIIGYIR"
+
+Write the code that will take a string and make this conversion given a number of rows:
+
+string convert(string s, int numRows);
+___
+### (7) Reverse Integer - Medium
+Given a signed 32-bit integer x, return x with its digits reversed. If reversing x causes the value to go outside the signed 32-bit integer range [-2^31, 2^31 - 1], then return 0.
+
+Assume the environment does not allow you to store 64-bit integers (signed or unsigned).
+___
+### (8) String to Integer (atoi) - Medium
+Implement the myAtoi(string s) function, which converts a string to a 32-bit signed integer.
+
+The algorithm for myAtoi(string s) is as follows:
+
+    Whitespace: Ignore any leading whitespace (" ").
+    Signedness: Determine the sign by checking if the next character is '-' or '+', assuming positivity if neither present.
+    Conversion: Read the integer by skipping leading zeros until a non-digit character is encountered or the end of the string is reached. If no digits were read, then the result is 0.
+    Rounding: If the integer is out of the 32-bit signed integer range [-2^31, 2^31 - 1], then round the integer to remain in the range. Specifically, integers less than -231 should be rounded to -231, and integers greater than 231 - 1 should be rounded to 231 - 1.
+
+Return the integer as the final result.
+___
+### (9) Palindrome Number - Easy
+Given an integer x, return true if x is a palindrome, and false otherwise.
+___
+### (10) Regular Expression Matching - Hard
+Given an input string s and a pattern p, implement regular expression matching with support for '.' and '*' where:
+
+    '.' Matches any single character.
+    '*' Matches zero or more of the preceding element.
+
+The matching should cover the entire input string (not partial).
+___
