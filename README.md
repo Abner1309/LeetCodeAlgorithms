@@ -65,3 +65,42 @@ Given an input string s and a pattern p, implement regular expression matching w
 
 The matching should cover the entire input string (not partial).
 ___
+### (11) Container With Most Water - Medium
+You are given an integer array height of length n. There are n vertical lines drawn such that the two endpoints of the i^th line are (i, 0) and (i, height[i]).
+
+Find two lines that together with the x-axis form a container, such that the container contains the most water.
+
+Return the maximum amount of water a container can store.
+
+Notice that you may not slant the container.
+___
+### (12) Integer To Roman - Medium
+Seven different symbols represent Roman numerals with the following values:
+I - 1; V - 5; X - 10; L - 50; C - 100; D - 500; M - 1000.
+Roman numerals are formed by appending the conversions of decimal place values from highest to lowest. Converting a
+decimal place value into a Roman numeral has the following rules:<br><br>
+(1) If the value does not start with 4 or 9, select the symbol of the maximal value that can be subtracted from the input, 
+append that symbol to the result, subtract its value, and convert the remainder to a Roman numeral.<br><br>
+(2) If the value starts with 4 or 9 use the subtractive form representing one symbol subtracted from the following symbol, 
+for example, 4 is 1 (I) less than 5 (V): IV and 9 is 1 (I) less than 10 (X): IX. Only the following subtractive forms are used: 4 (IV), 9 (IX), 40 (XL), 90 (XC), 400 (CD) and 900 (CM).<br><br>
+(3) Only powers of 10 (I, X, C, M) can be appended consecutively at most 3 times to represent multiples of 10. You cannot
+append 5 (V), 50 (L), or 500 (D) multiple times. If you need to append a symbol 4 times use the subtractive form.<br><br>
+Given an integer, convert it to a Roman numeral.
+___
+### (13) Roman To Integer - Easy
+Roman numerals are represented by seven different symbols: I, V, X, L, C, D and M.<br>
+Given a roman numeral, convert it to an integer.
+___
+### (14) Longest Common Prefix - Easy
+Write a function to find the longest common prefix string amongst an array of strings.<br>
+If there is no common prefix, return an empty string "".
+___
+### (15) Three Sum - Medium
+Given an integer array nums, return all the triplets [nums[i], nums[j], nums[k]] such that i != j, i != k, and j != k,
+and nums[i] + nums[j] + nums[k] == 0.<br>
+Notice that the solution set must not contain duplicate triplets.
+___
+
+
+
+
