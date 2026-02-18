@@ -100,7 +100,26 @@ Given an integer array nums, return all the triplets [nums[i], nums[j], nums[k]]
 and nums[i] + nums[j] + nums[k] == 0.<br>
 Notice that the solution set must not contain duplicate triplets.
 ___
+### (16) Three Sum Closest - Medium
+Given an integer array nums of length n and an integer target, find three integers at distinct indices in nums such that
+the sum is closest to target.<br>
+Return the sum of the three integers.<br>
+You may assume that each input would have exactly one solution.<br>
+___
+### (17) Letter Combinations of a Phone Number - Medium
+Given a string containing digits from 2-9 inclusive, return all possible letter combinations that the number could represent.
+Return the answer in any order.<br>
+A mapping of digits to letters (just like on the telephone buttons) is given below. Note that 1 does not map to any letters.
+___
+### (18) Four Sum - Medium
+Given an array nums of n integers, return an array of all the unique quadruplets [nums[a], nums[b], nums[c], nums[d]] such that:<br>
 
+> 0 <= a, b, c, d < n <br>
+> a, b, c, and d are distinct. <br>
+> nums[a] + nums[b] + nums[c] + nums[d] == target<br>
+
+You may return the answer in any order.
+___
 
 
 
