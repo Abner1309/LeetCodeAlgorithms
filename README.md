@@ -140,5 +140,8 @@ Merge the two lists into one sorted list. The list should be made by splicing to
 
 Return the head of the merged linked list.
 ___
+### (22) Generate Parentheses - Medium
+Given n pairs of parentheses, write a function to generate all combinations of well-formed parentheses.
+___
 
 
