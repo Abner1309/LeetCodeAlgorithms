@@ -13,17 +13,37 @@ public class Solution {
 
         ListNode dummy = new ListNode(0);
         dummy.next = head;
-        ListNode beforeNode = new ListNode(0);
-        beforeNode.next = head;
-        ListNode firstNode = new ListNode(0);
-        firstNode.next = head;
-        ListNode secondNode = new ListNode(0);
-        secondNode.next = head.next;
-        ListNode afterNode = new ListNode(0);
-        afterNode.next = head.next;
+        ListNode actualGroup = new ListNode(0);
+        actualGroup.next = head;
+        ListNode nextGroup = new ListNode(0);
+        nextGroup.next = head;
 
-        while (secondNode != null) {
+        ListNode auxiliary1 = dummy;
+        ListNode firstNode = head;
+        ListNode secondNode = head;
+        ListNode auxiliary2 = head;
 
+        int i = 1;
+        while (verifyQuantity(firstNode, k)) {
+            while (firstNode != secondNode) {
+                for (i = i + 1; i < k; i++) {
+                    secondNode = secondNode.next;
+                    if (i != 1) {
+                        auxiliary2 = auxiliary2.next;
+                    }
+                }
+
+                ListNode temporary = firstNode.next;
+                firstNode.next = secondNode.next;
+                secondNode.next = temporary;
+                auxiliary1.next = secondNode;
+                auxiliary2.next = firstNode;
+
+                auxiliary1 = auxiliary1.next;
+                firstNode = firstNode.next;
+                secondNode = firstNode;
+                auxiliary2 = firstNode;
+            }
         }
 
         return dummy.next;
