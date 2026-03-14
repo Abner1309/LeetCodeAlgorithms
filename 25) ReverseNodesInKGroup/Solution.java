@@ -2,7 +2,7 @@ public class Solution {
     private static boolean verifyQuantity(ListNode head, int k) {
         ListNode aux = head;
         int i;
-        for (i = 0; i < k && aux != null; i++) {
+        for (i = 1; i < k && aux != null; i++) {
             aux = aux.next;
         }
         return i == k;
@@ -13,24 +13,17 @@ public class Solution {
 
         ListNode dummy = new ListNode(0);
         dummy.next = head;
-        ListNode actualGroup = new ListNode(0);
-        actualGroup.next = head;
-        ListNode nextGroup = new ListNode(0);
-        nextGroup.next = head;
 
         ListNode auxiliary1 = dummy;
         ListNode firstNode = head;
         ListNode secondNode = head;
         ListNode auxiliary2 = head;
 
-        int i = 1;
         while (verifyQuantity(firstNode, k)) {
-            while (firstNode != secondNode) {
-                for (i = i + 1; i < k; i++) {
+            for (int j = 0; j < Math.floorDiv(k, 2); j++) {
+                for (int z = 1; z < k - 2 * j; z++) {
                     secondNode = secondNode.next;
-                    if (i != 1) {
-                        auxiliary2 = auxiliary2.next;
-                    }
+                    if (z != 1) { auxiliary2 = auxiliary2.next; }
                 }
 
                 ListNode temporary = firstNode.next;
@@ -39,11 +32,17 @@ public class Solution {
                 auxiliary1.next = secondNode;
                 auxiliary2.next = firstNode;
 
+                firstNode = auxiliary1.next.next;
+                auxiliary1 = auxiliary1.next;
+                auxiliary2 = firstNode;
+                secondNode = firstNode;
+            }
+            for (int x = 0; x < Math.floorDiv(k, 2) + 1 && firstNode.next != null; x++) {
                 auxiliary1 = auxiliary1.next;
                 firstNode = firstNode.next;
-                secondNode = firstNode;
-                auxiliary2 = firstNode;
             }
+            auxiliary2 = firstNode;
+            secondNode = firstNode;
         }
 
         return dummy.next;
