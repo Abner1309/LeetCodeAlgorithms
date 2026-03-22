@@ -26,9 +26,14 @@ public class Solution {
         int lengthOfEachString = words[0].length();
         int chunkLength = numberOfStrings * lengthOfEachString;
 
-        for (int i = 0; i < s.length(); i = i + lengthOfEachString) {
+        for (int i = 0; i < s.length(); i++) {
             try { auxiliary.append(s, i, i + chunkLength); }
             catch (IndexOutOfBoundsException e) { break; }
+
+            if (checkSubString(lengthOfEachString, auxiliary.toString(), words)) {
+                answer.add(i);
+            }
+            auxiliary.setLength(0);
         }
 
         return answer;
