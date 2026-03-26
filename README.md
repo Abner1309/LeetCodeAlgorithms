@@ -211,3 +211,6 @@ The next permutation of an array of integers is the next lexicographically great
 Given an array of integers nums, find the next permutation of nums.
 
 The replacement must be in place and use only constant extra memory.
+___
+### (32) Longest Valid Parentheses - Hard
+Given a string containing just the characters '(' and ')', return the length of the longest valid (well-formed) parentheses substring.
