@@ -223,3 +223,10 @@ Prior to being passed to your function, nums is possibly left rotated at an unkn
 Given the array nums after the possible rotation and an integer target, return the index of target if it is in nums, or -1 if it is not in nums.
 
 You must write an algorithm with O(log n) runtime complexity.
+___
+### (34) Find First and Last Position of Element in Sorted Array - Medium
+Given an array of integers nums sorted in non-decreasing order, find the starting and ending position of a given target value.
+
+If target is not found in the array, return [-1, -1].
+
+You must write an algorithm with O(log n) runtime complexity.
